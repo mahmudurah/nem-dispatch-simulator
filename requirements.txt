@@ -1,0 +1,11 @@
+# Core Numerical & Scientific Computing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Interactive Visualization & Plotting
+plotly>=5.15.0
+matplotlib>=3.7.0
+
+# Testing
+pytest>=7.4.0

@@ -1,0 +1,18 @@
+generator_id,name,fuel_type,region,capacity_mw,min_stable_mw,srmc_per_mwh,emission_factor_t_per_mwh,ramp_rate_mw_per_min,is_storage,storage_capacity_mwh,round_trip_efficiency,commission_year,planned_retirement_year
+ERARING_1_4,Eraring Power Station (Units 1-4),Black Coal,NSW1,2880.0,800.0,42.50,0.940,25.0,False,0.0,1.0,1982,2027
+BAYSWATER_1_4,Bayswater Power Station (Units 1-4),Black Coal,NSW1,2640.0,750.0,38.20,0.910,20.0,False,0.0,1.0,1985,2033
+MT_PIPER_1_2,Mount Piper Power Station (Units 1-2),Black Coal,NSW1,1400.0,400.0,45.80,0.890,15.0,False,0.0,1.0,1993,2040
+TALLAWARRA_A,Tallawarra Combined Cycle,Gas CCGT,NSW1,435.0,150.0,115.00,0.420,30.0,False,0.0,1.0,2009,2045
+TALLAWARRA_B,Tallawarra B Fast-Start,Gas Peaker,NSW1,316.0,50.0,165.00,0.520,40.0,False,0.0,1.0,2024,2055
+KURRI_KURRI_PEAKER,Hunter Power Project (Kurri Kurri),Gas Peaker,NSW1,660.0,50.0,160.00,0.510,50.0,False,0.0,1.0,2025,2055
+COLONGRA_1_4,Colongra Gas Peakers,Gas OCGT,NSW1,660.0,80.0,225.00,0.640,60.0,False,0.0,1.0,2009,2045
+URANQUINTY_1_4,Uranquinty Gas Peakers,Gas OCGT,NSW1,640.0,80.0,215.00,0.630,50.0,False,0.0,1.0,2009,2045
+SHOALHAVEN_PH,Shoalhaven Pumped Hydro Scheme,Pumped Hydro,NSW1,240.0,0.0,15.00,0.000,80.0,True,1920.0,0.76,1977,2060
+NSW_SOLAR_EXISTING,NSW Operating Solar Farms (Aggregated),Solar,NSW1,1850.0,0.0,0.00,0.000,100.0,False,0.0,1.0,2018,2050
+NSW_WIND_EXISTING,NSW Operating Wind Farms (Aggregated),Wind,NSW1,2250.0,0.0,0.00,0.000,100.0,False,0.0,1.0,2017,2050
+WARATAH_SUPER_BESS,Waratah Super Battery System,Battery BESS,NSW1,850.0,0.0,8.50,0.000,425.0,True,1680.0,0.88,2025,2045
+CWO_REZ_SOLAR,Central-West Orana REZ Solar,Solar,NSW1,1500.0,0.0,0.00,0.000,100.0,False,0.0,1.0,2027,2055
+CWO_REZ_WIND,Central-West Orana REZ Wind,Wind,NSW1,1800.0,0.0,0.00,0.000,100.0,False,0.0,1.0,2027,2055
+NEW_ENGLAND_REZ_WIND,New England REZ Wind Expansion,Wind,NSW1,2000.0,0.0,0.00,0.000,100.0,False,0.0,1.0,2028,2055
+LDS_PUMPED_HYDRO,NSW Long Duration Storage (8h+),Pumped Hydro,NSW1,1200.0,0.0,12.00,0.000,200.0,True,9600.0,0.78,2029,2080
+GRID_BESS_EXPANSION,NSW Distributed Grid Batteries,Battery BESS,NSW1,1000.0,0.0,9.00,0.000,500.0,True,2000.0,0.88,2028,2048
