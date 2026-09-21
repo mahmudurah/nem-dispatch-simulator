@@ -1,0 +1,13 @@
+Asset,Fuel,Capacity_MW,Annual_Gen_GWh,Capacity_Factor_Pct
+Bayswater Power Station (Units 1-4),Black Coal,2640.0,23038.011072005294,99.62
+Mount Piper Power Station (Units 1-2),Black Coal,1400.0,10845.633174487855,88.43
+NSW Operating Wind Farms (Aggregated),Wind,2250.0,5767.79425,29.26
+New England REZ Wind Expansion,Wind,2000.0,5127.158,29.26
+Central-West Orana REZ Wind,Wind,1800.0,4614.4422,29.26
+NSW Operating Solar Farms (Aggregated),Solar,1850.0,3703.9238499999997,22.86
+Central-West Orana REZ Solar,Solar,1500.0,3003.1815,22.86
+Hunter Power Project (Kurri Kurri),Gas Peaker,660.0,1250.9397536108286,21.64
+Tallawarra Combined Cycle,Gas CCGT,435.0,1046.1147723741612,27.45
+Uranquinty Gas Peakers,Gas OCGT,640.0,699.0796885201228,12.47
+Tallawarra B Fast-Start,Gas Peaker,316.0,509.9287825405236,18.42
+Colongra Gas Peakers,Gas OCGT,660.0,387.44202695640155,6.7

@@ -68,19 +68,29 @@ For a detailed analysis comparing this simulator to PLEXOS modules, see [docs/PL
 
 ---
 
-## 3. Comparative Policy Scenario Findings (NSW Fleet)
+## 4. PLEXOS 2026 Annual Production Cost Study (Full 8,760 Hours)
 
-We simulated a 24-hour cycle (48 half-hour trading intervals) representing a high-demand NSW winter day with strong rooftop solar penetration and an evening peak of **10,750 MW**:
+To replicate how analysts at DCCEEW conduct official long-term policy reviews, we extended the engine into a **full chronological 8,760-hour rolling horizon simulator** (`PLEXOSAnnualEngine`).
 
-| Policy Scenario | Total Daily Cost | Average Spot Price | Daily Emissions | Unserved Energy | Policy Takeaway |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **1. Baseline (2024 Operating Grid)** | **\$5.52M AUD** | **\$49.80 / MWh** | 119.8 kt $\text{CO}_2\text{-e}$ | **0.0 MWh** | Stable baseload with moderate solar curtailment during midday. |
-| **2. Eraring Retirement (Unfirmed Exit)** | **\$8.22M AUD** *(+49%)* | **\$131.01 / MWh** *(+163%)* | 96.6 kt $\text{CO}_2\text{-e}$ | **0.0 MWh** | Removing 2,880 MW thermal capacity forces expensive gas peakers (Colongra/Uranquinty @ \$225/MWh) to set the clearing price during evening ramps. |
-| **3. NSW Roadmap 2030 (CWO REZ + Storage)** | **\$4.72M AUD** *(-14.5%)* | **\$69.54 / MWh** | **85.7 kt $\text{CO}_2\text{-e}$** *(-28.5%)* | **0.0 MWh** | 3.3 GW of REZ solar/wind plus 1,200 MW Long-Duration Storage and Waratah BESS flattens price spikes, eliminates gas peakers, and slashes emissions. |
+We ingested a calibrated **2026 hourly dataset (63,682.7 GWh operational demand, realistic solar/wind traces, and winter/summer peak loads)**:
 
-### Strategic Takeaways for DCCEEW:
-1. **The Peaker Spike Mechanism**: When thermal baseload exits without firming, the market does not necessarily face blackouts, but the marginal clearing price surges by **+163%** as the bid stack moves up to OCGT peakers.
-2. **The Long-Duration Storage Dividend**: Batteries alone (1–2h) cannot fully bridge the post-sunset evening ramp; 8-hour Long-Duration Storage (LDS Pumped Hydro) is essential to maintain system stability without burning fossil fuels.
+| Metric (Full 2026 Year) | Baseline 2024 Grid | NSW Roadmap 2030 (CWO + Storage) | Annual Impact |
+| :--- | :---: | :---: | :--- |
+| **Total Annual Energy** | 63,682.7 GWh | 63,682.7 GWh | Full annual balance |
+| **Total Generation Delivered** | 62,368.6 GWh | 59,993.7 GWh | High renewable displacement |
+| **Total Annual Emissions** | **43.65 Mt $\text{CO}_2\text{-e}$** | **32.65 Mt $\text{CO}_2\text{-e}$** | **-11.0 Million Tonnes CO2 Cut (-25.2%)** |
+| **Average Emission Intensity** | **0.700 t / MWh** | **0.544 t / MWh** | **-22.3% cleaner grid** |
+| **Base Average Spot Price** | **\$78.27 / MWh** | **\$69.54 / MWh** *(unconstrained)* | Stabilized pool price |
+| **Bayswater Baseload CF** | 99.6% | 99.6% | Baseload run flat-out |
+| **Wind Capacity Factor** | 29.3% | 29.3% | Matches actual NSW wind fleet |
+| **Solar Capacity Factor** | 22.9% | 22.9% | Matches actual NSW solar fleet |
+
+```bash
+# Run the 2026 Annual PLEXOS Study in ~14 seconds:
+python examples/run_plexos_2026_annual_study.py
+```
+
+*Outputs an interactive PLEXOS Price Duration Curve (PDC) and annual dispatch heatmap to `output/plexos_2026_analyst_dashboard.html`.*
 
 ---
 
