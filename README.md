@@ -6,11 +6,11 @@
 [![AEMO: Live NEMWEB Data](https://img.shields.io/badge/Data-AEMO%20NEMWEB-orange.svg)](https://nemweb.com.au/)
 [![Target: NSW Roadmap 2030](https://img.shields.io/badge/Policy-NSW%20Electricity%20Roadmap-teal.svg)](https://www.energy.nsw.gov.au/nsw-plans-and-progress/major-state-projects/electricity-infrastructure-roadmap)
 
-> An open-source, production-grade National Electricity Market (NEM) Economic Dispatch and Unit Commitment simulation engine developed in Python.
+> **Note**: This is an open-source educational and research learning project designed for researchers, analysts, and students who want to understand, simulate, and demystify the mathematical mechanics of the Australian National Electricity Market (NEM) and commercial tools like PLEXOS from first principles.
 > 
 > Formulates the multi-interval Linear Programming (LP) optimization problem that underpins commercial packages like **PLEXOS (ST Schedule)** and **AEMO's NEMDE**, co-optimizing battery energy storage (BESS) cycling, thermal ramp limits, transmission interconnectors, and NSW policy scenarios.
 > 
-> **Backtested against real AEMO market data (2024–2026)** to provide empirical, defensible policy intelligence for the **NSW Electricity Infrastructure Roadmap**.
+> **Backtested against real AEMO market data (2024–2026)** to provide empirical, transparent research intelligence on the **NSW Electricity Infrastructure Roadmap**.
 
 **Author**: **Dr. Md Mahmudur Rahman (PhD)**  
 *Senior Data Analytics Lead | Former Atmospheric Scientist, NSW DPIE / DCCEEW*  

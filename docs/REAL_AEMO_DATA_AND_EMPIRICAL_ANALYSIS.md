@@ -1,5 +1,7 @@
 # Empirical Analysis of NSW Electricity Market (2024–2026) & Model Backtesting
 
+> **Note**: This is an open-source educational and research learning project designed for researchers, analysts, and students who want to understand, simulate, and demystify the mathematical mechanics of the Australian National Electricity Market (NEM) and commercial tools like PLEXOS from first principles.
+
 This document provides a comprehensive market intelligence and empirical analysis of the **New South Wales (NSW1)** region in the Australian **National Electricity Market (NEM)** across 2024, 2025, and 2026.
 
 It documents how official AEMO dispatch records were ingested, backtested against the simulation engine, and used to quantify the commercial value of battery storage and the procurement requirements of the **NSW Electricity Infrastructure Roadmap**.

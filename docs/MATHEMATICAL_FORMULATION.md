@@ -1,5 +1,7 @@
 # Mathematical Formulation: NEM Economic Dispatch & Storage Co-Optimization
 
+> **Note**: This is an open-source educational and research learning project designed for researchers, analysts, and students who want to understand, simulate, and demystify the mathematical mechanics of the Australian National Electricity Market (NEM) and commercial tools like PLEXOS from first principles.
+
 This document provides the rigorous mathematical formulation of the **NEM Dispatch Simulator**, which mirrors the core economic dispatch and unit commitment algorithms implemented in commercial energy modeling platforms such as **PLEXOS (ST Schedule)** and **AEMO's NEMDE**.
 
 ---
