@@ -90,5 +90,23 @@ class TestNEMDispatchEngine(unittest.TestCase):
         # Average spot price under Eraring exit must be significantly higher than Baseline
         self.assertGreater(res.average_price_per_mwh, 100.0, "Expected high peak prices under coal retirement")
 
+    def test_accelerated_scenario_price_parity(self):
+        """Test that Accelerated Roadmap achieves price parity (~$50/MWh) with Baseline."""
+        gens, stor = load_nsw_scenario('NSW_Roadmap_Accelerated')
+        engine = NEMDispatchEngine(
+            generators=gens,
+            storage_assets=stor,
+            interconnectors=self.interconnectors,
+            interval_minutes=30
+        )
+        res = engine.solve(
+            demand_trace_mw=self.demand,
+            solar_capacity_factor=self.solar_cf,
+            wind_capacity_factor=self.wind_cf
+        )
+        self.assertTrue(res.success)
+        self.assertLess(res.average_price_per_mwh, 52.0, "Expected price parity near $50/MWh")
+        self.assertLess(res.total_emissions_tco2, 75000.0, "Expected deeper decarbonization under expanded REZ")
+
 if __name__ == '__main__':
     unittest.main()

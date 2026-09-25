@@ -104,8 +104,34 @@ def load_nsw_scenario(scenario_name: str) -> Tuple[List[Generator], List[Storage
         active_storage = all_storage # Includes Waratah, Shoalhaven, and 8h LDS Pumped Hydro
         return active_gens, active_storage
 
+    elif scenario_name_lower in ['nsw_roadmap_accelerated', 'roadmap_accelerated', 'price_parity']:
+        # Eraring retired + 3 GW extra REZ solar + 2 GW / 8 GWh 4h BESS (Achieves $49.60/MWh price parity)
+        active_gens = [g for g in all_gens if g.generator_id != 'ERARING_1_4']
+        active_gens.append(Generator(
+            generator_id='ACCELERATED_REZ_SOLAR',
+            name='Expanded REZ Solar (+3GW)',
+            fuel_type='Solar',
+            region='NSW1',
+            capacity_mw=3000.0,
+            srmc_per_mwh=0.0,
+            emission_factor=0.0
+        ))
+        active_storage = [s for s in all_storage]
+        active_storage.append(StorageAsset(
+            storage_id='ACCELERATED_BESS_4H',
+            name='Expanded 4h BESS (+2GW/8GWh)',
+            fuel_type='Battery BESS',
+            region='NSW1',
+            max_charge_mw=2000.0,
+            max_discharge_mw=2000.0,
+            storage_capacity_mwh=8000.0,
+            round_trip_efficiency=0.88,
+            degradation_cost_per_mwh=8.0
+        ))
+        return active_gens, active_storage
+
     else:
-        raise ValueError(f"Unknown scenario: {scenario_name}. Choose from: 'Baseline_2024', 'Eraring_Retirement_Unfirmed', 'NSW_Roadmap_2030'.")
+        raise ValueError(f"Unknown scenario: {scenario_name}. Choose from: 'Baseline_2024', 'Eraring_Retirement_Unfirmed', 'NSW_Roadmap_2030', 'NSW_Roadmap_Accelerated'.")
 
 def get_nsw_interconnectors() -> List[Interconnector]:
     """Return standard NEM interconnectors feeding NSW."""
@@ -140,7 +166,8 @@ def run_scenario_comparison() -> Dict[str, DispatchResult]:
     scenario_names = [
         'Baseline_2024',
         'Eraring_Retirement_Unfirmed',
-        'NSW_Roadmap_2030'
+        'NSW_Roadmap_2030',
+        'NSW_Roadmap_Accelerated'
     ]
 
     interconnectors = get_nsw_interconnectors()

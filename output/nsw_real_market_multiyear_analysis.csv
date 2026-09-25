@@ -1,0 +1,4 @@
+Year,Avg_Spot_Price_AUD,Median_Spot_Price_AUD,Std_Dev_Spot_Price,Max_Spot_Price_AUD,Min_Spot_Price_AUD,Negative_Price_Intervals_Pct,Extreme_Spikes_Gt_300_Pct,Avg_Operational_Demand_MW,Peak_Demand_MW,Avg_Renewables_MW,Max_Renewables_MW,Midday_Avg_Price_10_14,Evening_Peak_Avg_Price_17_21,Battery_Arbitrage_Spread_AUD
+2024,78.71,59.99,325.04,9569.76,-878.45,3.38,0.58,7530.1,12494.6,1791.3,4234.3,51.76,162.03,110.27
+2025,87.61,76.72,473.97,17500.0,-999.99,16.78,0.53,7102.2,11702.6,2054.8,4752.3,61.93,138.65,76.72
+2026,67.84,57.06,417.38,11938.05,-999.98,10.46,0.6,7247.3,13146.8,2432.3,5480.1,22.49,156.01,133.52
